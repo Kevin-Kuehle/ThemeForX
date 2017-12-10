@@ -1,0 +1,96 @@
+//  Clear Fix -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin pie-clearfix {
+  &:after {
+    content : "";
+    display : table;
+    clear   : both;
+  }
+  zoom : 1;
+}
+//  TextOptimizer -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@mixin TextOptimizer {
+  -webkit-font-smoothing : antialiased !important;
+  text-shadow            : 1px 1px 1px 1px rgba(0, 0, 0, 0.005);
+}
+//  After menus -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@mixin after_line {
+  &:after {
+    content    : '';
+    background : $light;
+    position   : absolute;
+    top        : 100%;
+    left       : 0;
+    height     : 1px;
+    width      : 100%;
+    @include trans-1;
+  }
+}
+@mixin menu-after {
+
+  &:after {
+    opacity: 0;
+    content    : '';
+    background : $color-2;
+    position   : absolute;
+    top        : 100%;
+    left       : 0;
+    height     : 1px;
+    width      : calc(100% - 1.6rem); // unsauber
+    @include trans-1;
+  }
+
+  &:last-child {
+    &:after {
+      width : calc(100%); // unsauber
+    }
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      top     : calc(100% - 12px);
+    }
+  }
+}
+//  Text Styles -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin text-shaddow {
+  text-shadow : rgba(0, 0, 0, 0.7) 2px 1px 2px;
+}
+@mixin box-shaddow {
+  box-shadow : 0 2px 2px rgba(black, 0.60);
+}
+//  Transitions -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin trans-1 {
+  transition : all 0.08s ease-out;
+}
+@mixin trans-2 {
+  transition : all .4s ease;
+}
+@mixin trans-3 {
+  transition : all 1.4s;
+}
+// Gradians ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin gradiant-blue {
+  background : linear-gradient(-75deg, #5494cd 0%, #467cc0 100%);
+}
+@mixin gradiant-grey {
+  background : linear-gradient(-75deg, rgba(#515B64, 1) 0%, rgba(#616D78, 1) 100%);
+}
+@mixin gradiant-yellow {
+  background : linear-gradient(-75deg, rgba(#E5C13F, 1) 0%, rgba(#EACD4C, 1) 100%);
+}
+@mixin gradiant-green {
+  background : -moz-linear-gradient(-355.17% -1374.52% 0deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
+  background : -webkit-gradient(linear, -355.17% -1374.52%, -355.05% -1374.52%, color-stop(0, rgba(155, 196, 78, 1)), color-stop(1, rgba(131, 182, 65, 1)));
+  background : -o-linear-gradient(0deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
+  background : -ms-linear-gradient(0deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
+  -ms-filter : "progid:DXImageTransform.Microsoft.gradient(startColorstr='#9BC44E', endColorstr='#83B641' ,GradientType=0)";
+  background : linear-gradient(90deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
+  filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr='#9BC44E', endColorstr='#83B641', GradientType=1);
+}
+
+
+

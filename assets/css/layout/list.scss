@@ -1,0 +1,47 @@
+.descriptionList {
+
+  dl {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px dashed red;
+
+    dt {
+      flex: auto;
+      margin-right: 0.7rem;
+      border: 1px dashed #00ff3c;
+    }
+    dd {
+      flex: auto;
+      margin-left: auto;
+      border: 1px dashed #4da1ff;
+    }
+  }
+}
+
+.listStyle-1 {
+  list-style: none;
+  i {
+    margin-right: rem(12px);
+    color: $color-1;
+  }
+
+  li {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 0.5rem;
+    font-size: rem(16px);
+    line-height: rem(16px + 7px);
+
+    &:before {
+      content: '\ea10';
+      font-family: $icon-font;
+      color: $color-1;
+      display: inline-block;
+      margin-right: 0.5rem;
+
+    }
+  }
+
+
+
+}

@@ -1,0 +1,207 @@
+/*=================================================================================================================================================================================================
+                                                                                           Global Elements
+================================================================================================= | =============================================================================================*/
+* {
+  box-sizing : border-box;
+  margin     : 0;
+  padding    : 0;
+}
+html {
+  background-color : $light;
+  height           : 100%;
+  min-height       : 100%;
+  font-family      : $main-font;
+  font-size        : $font-size;
+  color            : $siteFont-color;
+  line-height      : $line-height;
+}
+body {
+  background-color : $siteBackground-color;
+  min-height       : 100%;
+  overflow-x       : hidden;
+  max-width        : 100vw;
+  display          : flex;
+  flex-flow        : column;
+}
+//----------------------------------------------------------------------------------------------------------------------
+header {
+  & > * { z-index : 100; }
+}
+main {
+  flex : 5 0 auto;
+}
+footer {
+  flex             : 0 0 auto;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+  margin-top       : rem($gap * 2);
+  background-color : #1a1a1a;
+  padding          : 2em 0 !important;
+
+  body.home & {
+    margin-top : 0;
+  }
+
+  &.footer {
+
+    .row {
+
+      > .col:last-of-type {
+        display       : flex;
+        flex-flow     : column nowrap;
+        justify-items : flex-start;
+
+        img {
+          max-width     : rem(160px);
+          margin-bottom : rem(16px);
+          align-self    : center;
+          justify-self  : flex-start;
+        }
+      }
+    }
+
+    @include breakpoint(lg) {
+      .row {
+        .col {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+}
+/*=================================================================================================================================================================================================
+                                                                                             Typography
+================================================================================================= | =============================================================================================*/
+p {
+  font-family   : $main-font;
+  line-height   : $line-height;
+  font-size     : $font-size;
+  font-weight   : 300;
+  color         : $black;
+  margin-bottom : $font-margin-bottom;
+  position      : relative;
+  @include TextOptimizer;
+
+  &:only-of-type, &:last-of-type, &:last-of-type > .row {
+    margin-bottom : 0 !important;
+  }
+
+  @include breakpoint(sm) {
+    font-size   : $font-size;
+    line-height : $line-height;
+  }
+
+  strong {
+    font-family : $main-font;
+    font-style  : italic;
+    color       : $color-1;
+  }
+
+  b {
+    font-family : $main-font;
+    font-style  : normal;
+    color       : $color-2;
+
+    &.light {
+      color : $light;
+    }
+
+  }
+
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-family : $title-font;
+  display     : block;
+  @include TextOptimizer;
+
+  .row > & {
+    flex : 1 0 100%;
+  }
+
+  &.col {
+    margin-bottom : 0;
+  }
+
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h1 {
+  font-size     : $h1-size * $xs;
+  line-height   : $h1-line-height;
+  color         : $h1-color;
+  margin-bottom : $h1-margin-bottom;
+  font-family   : $title-font;
+  text-align    : center;
+  font-weight   : 300;
+
+  @include breakpoint(sm) {
+    font-size : $h1-size * $sm;
+  }
+
+  @include breakpoint(md) {
+    font-size : $h1-size * $md;
+  }
+
+  @include breakpoint(lg) {
+    font-size : $h1-size * $lg;
+  }
+
+  @include breakpoint(xl) {
+    font-size : $h1-size;
+  }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h2 {
+  font-size     : $h2-size;
+  line-height   : $h2-line-height;
+  color         : $h2-color;
+  font-weight   : 300;
+  margin-bottom : $h2-margin-bottom;
+
+  .row > & {
+    padding-left  : $gap;
+    margin-bottom : $h2-margin-bottom !important;
+  }
+
+  b {
+    color       : $color-1;
+    font-weight : 600;
+  }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h3 { font-size : $h3-size; line-height : $h3-line-height; color : $h3-color; margin-bottom : $h3-margin-bottom; }
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h4 { font-size : $h4-size; line-height : $h4-line-height; color : $h4-color; margin-bottom : $h4-margin-bottom; }
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h5 { font-size : $h5-size; line-height : $h5-line-height; color : $h5-color; margin-bottom : $h5-margin-bottom; }
+//------------------------------------------------------------------------------------------------------------------------------------------------
+h6 { font-size : $h6-size; line-height : $h6-line-height; color : $h6-color; margin-bottom : $h5-margin-bottom; }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+a { color : $siteLink-color; text-decoration : none;
+  &:hover {
+    color : $siteLinkHover-color;
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+b { font-weight : 500; }
+i { font-family : $main-font; }
+/*=================================================================================================================================================================================================
+                                                                                        Global Content Elements
+================================================================================================= | =============================================================================================*/
+
+img {
+  height     : 100%;
+  max-height : rem(150px);
+  width      : auto;
+
+  @include breakpoint(md) {
+    max-width : 100%;
+    height    : auto;
+  }
+}
+
+
+

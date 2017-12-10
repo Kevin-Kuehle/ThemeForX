@@ -1,0 +1,55 @@
+/*=================================================================================================================================================================================================
+                                                                                               Buttons
+================================================================================================= | =============================================================================================*/
+.btn {
+  display          : inline-flex;
+  align-items      : center;
+  flex             : 0 0 auto;
+  background-color : inherit;
+  border           : none;
+  cursor           : pointer;
+  color            : $light;
+  font-size        : rem(14px);
+  line-height      : 0;
+  font-weight      : 300;
+  font-family      : $main-font;
+  padding          : rem(9px) rem(14px);
+  @include trans-2;
+
+  @include breakpoint(md) {
+    font-size : rem(16px);
+  }
+
+  span {
+    font-size : $font-size !important;
+
+    &:before {
+      display      : flex;
+      align-items  : center;
+      font-size    : rem(16px) !important;
+      color        : $color-1;
+      margin-right : rem(10px);
+
+      @include breakpoint(md) {
+        font-size : rem(18px) !important;
+      }
+    }
+  }
+
+  &.btn-1 {
+    background-color : $color-2;
+    padding          : rem(10px) rem(20px) rem(10px) rem(14px);
+    border-radius    : rem(8px);
+    position: relative;
+
+    &:hover {
+      background-color : $light;
+      color            : #1a1a1a;
+
+      span {
+        &:before { color : $color-2 }
+      }
+    }
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

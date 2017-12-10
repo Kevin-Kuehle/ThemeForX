@@ -1,0 +1,34 @@
+/*=================================================================================================================================================================================================
+                                                                                               Columns
+================================================================================================= | =============================================================================================*/
+$column-names : "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12";
+
+//  Generate Columns  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin grid-columns($breakpoint, $columns: $column-names) {
+  $column-count : length($column-names);
+  $col-width : 0;
+
+  @for $i from 1 through $column-count {
+    $col-width : 100% / ($column-count / $i);
+
+    .#{$breakpoint}-#{nth($column-names, $i)} {
+      width : $col-width;
+    }
+
+    .prefix-#{$breakpoint}-#{nth($column-names, $i)} {
+      margin-left : $col-width;
+    }
+
+    .suffix-#{$breakpoint}-#{nth($column-names, $i)} {
+      margin-right : $col-width;
+    }
+  }
+
+  .prefix-#{$breakpoint}-0 {
+    margin-left : 0;
+  }
+
+  .suffix-#{$breakpoint}-0 {
+    margin-right : 0;
+  }
+}

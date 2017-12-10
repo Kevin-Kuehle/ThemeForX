@@ -1,0 +1,29 @@
+/*
+Theme Name: ThemeforX
+Description: BETA
+Version: 0.1
+*/
+//------------------------------------------------------- Settings -----------------------------------------------------
+@import 'config';
+@import 'layout/mixins';
+@import 'layout/breakpoints';
+@import 'layout/columns';
+@import 'layout/grid';
+@import 'icon-font';
+@import 'layout/gridSystem';
+@import 'layout/globals';
+//------------------------------------------------------- Content ------------------------------------------------------
+@import 'slick';
+@import 'layout/navigations';
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/list';
+@import 'layout/formular';
+@import 'layout/aside';
+//----------------------------------------------------- Temp Files -----------------------------------------------------
+@import 'layout/wordpress';
+@import 'layout/testarea';
+
+
+
+

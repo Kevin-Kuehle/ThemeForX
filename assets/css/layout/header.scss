@@ -1,0 +1,139 @@
+/*======================================================================================================================
+                                                         Header
+============================================================|=========================================================*/
+.header {
+  position        : relative;
+  background-size : cover;
+  box-sizing      : border-box;
+  display         : flex;
+  flex-flow       : column nowrap;
+  margin-bottom   : 3rem;
+
+  @include breakpoint(lg) {
+    margin-bottom : 0;
+  }
+
+  @include breakpoint(xl) {
+    max-height : 100vh;
+  }
+
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  .topBar {
+    @include trans-3;
+    background-color : $color-2;
+    width            : 100%;
+    display          : flex;
+    flex-flow        : row wrap;
+    flex             : 0 0 rem(55px);
+    color            : $white;
+    z-index          : 100;
+    top              : -600px;
+
+    @include breakpoint(md) {
+      flex      : 0 0 rem(91px);
+      flex-flow : column nowrap;
+    }
+    .infos {
+      background-color : $color-2;
+      flex             : 1;
+      display          : flex;
+      flex-flow        : column wrap;
+      font-size        : rem(12px);
+      align-items      : flex-start;
+      justify-content  : center;
+      line-height      : rem(22px);
+      padding-left     : $gap;
+      z-index          : 101;
+
+      @include breakpoint(xs) {
+        flex-flow       : row nowrap;
+        align-items     : center;
+        justify-content : space-around;
+        margin-left     : 0.3rem;
+        padding-left    : 0;
+        font-size       : rem(15px);
+      }
+
+      @include breakpoint(md) {
+        flex-flow   : row nowrap;
+        flex        : 0 1 rem(45px);
+        line-height : $line-height;
+      }
+
+      @include breakpoint(lg) {
+        width     : 100%;
+        max-width : $template-width;
+        margin    : 0 auto;
+        padding   : 0 2*$gap;
+      }
+
+      span {
+        font-weight : lighter;
+        display     : flex;
+        align-items : center;
+        // Icons
+        span {
+          margin-right : 0.6rem;
+        }
+      }
+      span.header-logo-box {
+        display : none;
+        z-index : 103;
+
+        @include breakpoint(md) {
+          display         : flex;
+          justify-content : center;
+          align-items     : center;
+          flex            : 0 0 83px;
+          position        : relative;
+          z-index         : 200;
+
+          &:after {
+            content          : '';
+            position         : absolute;
+            top              : -100%;
+            left             : -30%;
+            width            : 120px;
+            height           : 120px;
+            background-color : $color-2;
+            transform        : rotate(45deg) skewX(-20deg) skewY(-20deg);
+            z-index          : -100 !important;
+          }
+        }
+
+        @include breakpoint(lg) {
+          margin-right : auto;
+        }
+
+        .logo {
+          position : relative;
+          top      : rem(10px);
+          left     : 0;
+        }
+      }
+      .phone, .mail {
+        @include breakpoint(md) {
+          margin-right : $gap;
+        }
+      }
+      .phone {
+        flex          : 0 0 auto;
+        padding-right : 10px;
+      }
+      .mail {
+        flex : 0 0 auto;
+      }
+
+      & > :last-child { margin-right : 0; padding-right : 0; }
+    }
+
+    &.sticky {
+      @include trans-3;
+      position : fixed !important;
+      z-index  : 1000;
+      top: 0;
+      box-shadow: 0 1px 1px rgba($dark, 0.5);
+    }
+  }
+}
+

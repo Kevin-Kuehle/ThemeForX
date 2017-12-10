@@ -1,0 +1,277 @@
+/*=================================================================================================================================================================================================
+                                                                                                Basis
+================================================================================================= | =============================================================================================*/
+nav {
+
+  > * { z-index : 6000; }
+
+  ul {
+    display   : flex;
+    flex-flow : row nowrap;
+    position  : relative;
+
+    li {
+      list-style : none;
+      position   : relative;
+
+      @include breakpoint(md) {
+        &:first-child { margin-left : 0; }
+        &:last-child { margin-right : 0; }
+      }
+
+      &:before { margin-right : 0.3rem; color : $color-1; }
+
+      a {
+        text-decoration : none;
+        @include nav-style;
+      }
+
+      &:hover {
+        ul {
+          display  : flex;
+          position : absolute;
+          top      : 100%;
+          @include trans-2;
+        }
+      }
+
+      ul {
+        top        : 0;
+        left       : -0.7rem;
+        z-index    : 50;
+        display    : none;
+        flex-flow  : column nowrap;
+        background : darken($color-1, 0%);
+        @include trans-2;
+
+        li {
+          margin  : 0 !important;
+          padding : 0.5rem 2rem 0.5rem 0.7rem;
+
+          &:hover {
+            background : darken($color-1, 5%);
+          }
+
+          &:after {
+            display : none;
+          }
+
+          a {
+            &:after {
+              display : none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bold {
+    font-weight : bold;
+  }
+}
+/*=================================================================================================================================================================================================
+                                                                                               Nav-Main
+================================================================================================= | =============================================================================================*/
+nav.main-nav {
+  display : none;
+
+  @include breakpoint(md) {
+    display          : flex;
+    flex             : 1 0 auto;
+    flex-flow        : row nowrap;
+    width            : 100%;
+    color            : $color-2;
+    background-color : $color-1;
+
+    @include breakpoint(md) {
+      flex : 1 0 50px;
+    }
+
+    ul.menu {
+      display         : flex;
+      justify-content : center;
+      width           : 100%;
+
+      li {
+        margin      : 0 0.5rem;
+        list-style  : none;
+        display     : flex;
+        align-items : center;
+        position    : relative;
+
+        &:first-child { margin-left : 0; }
+        &:last-child {
+          margin-right : 0;
+          a {
+            &:after {
+              display : none;
+            }
+          }
+        }
+
+        a {
+          color           : $dark;
+          text-decoration : none;
+          display         : flex;
+          flex-flow       : row;
+
+          &:after {
+            content     : '\f0c8';
+            font-style  : normal;
+            font-size   : 0.5rem;
+            margin-left : 1.3rem;
+            font-family : $icon-font;
+          }
+        }
+
+        &:hover {
+          a {
+            color : $color-2;
+          }
+        }
+
+        @include menu-after;
+      }
+    }
+  }
+}
+/*=================================================================================================================================================================================================
+                                                                                             Footer-Nav
+================================================================================================= | =============================================================================================*/
+.footer-nav {
+  ul {
+    display         : flex;
+    flex-flow       : column nowrap;
+    justify-content : center;
+    justify-items   : center;
+    text-align      : center;
+
+    li {
+      a {
+        color       : $white;
+        font-weight : lighter;
+      }
+    }
+  }
+}
+/*=================================================================================================================================================================================================
+                                                                                             Mobile-Nav
+================================================================================================= | =============================================================================================*/
+nav.mobile-nav {
+  background-color : $color-2;
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  z-index          : 2000;
+  overflow         : hidden;
+  height           : 100%;
+  transform        : translateX(-100%);
+  width            : 80vw;
+  @include trans-2;
+
+  &.show {
+    transform : translateX(0);
+    @include trans-2;
+  }
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ul.menu {
+    color        : $medium;
+    display      : flex;
+    flex-flow    : column nowrap;
+    padding-left : $gap;
+
+    li {
+      display       : block;
+      margin-bottom : $gap;
+      border-left   : 2px $color-1 solid;
+
+      a {
+        color       : $color-1;
+        padding     : rem(18px);
+        font-weight : 300;
+
+        &:target {
+          color : $light;
+        }
+      }
+
+      &:hover {
+        ul {
+          position : inherit;
+          top      : inherit;
+          display  : inherit;
+        }
+      }
+
+      &:first-child {
+        margin-top : 2rem;
+      }
+
+      &:focus, &:active, &:target {
+        border-color : $light;
+      }
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      ul {
+        display     : flex;
+        flex-flow   : column nowrap;
+        background  : none;
+        margin-left : 0.5rem;
+
+        &:after {
+          display : none;
+        }
+
+        li {
+          border-left : none;
+
+          a {
+            color : $color-1;
+
+            &:hover {
+              color : $color-2;
+            }
+          }
+        }
+      }
+      //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    }
+  }
+  @include breakpoint(md) {
+    display : none;
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+button.nav-botton {
+  border           : none;
+  cursor           : pointer;
+  background-color : $color-1;
+  color            : $dark;
+  font-size        : 1.9rem;
+  padding          : 0 $gap;
+  flex             : 0 0 20%;
+  align-self       : stretch;
+
+  @include breakpoint(md) {
+    display : none;
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.canvasWrap {
+  min-height : 100vh;
+  display    : flex;
+  flex-flow  : column nowrap;
+  @include trans-2;
+  overflow   : hidden;
+
+  &.slide {
+    position  : fixed;
+    top       : 0;
+    right     : 0;
+    transform : translateX(80%);
+  }
+}
+/*
+Komisch nach änderung kann ich den Content nicht mehr verschieben
+nachhacken wieso es geht.
+*/

@@ -1,0 +1,159 @@
+/* Slider */
+/*======================================================================================================================
+                                                         Slick
+============================================================|=========================================================*/
+.slick-slider {
+  position                    : relative;
+  display                     : block;
+  box-sizing                  : border-box;
+  -webkit-touch-callout       : none;
+  -webkit-user-select         : none;
+  -khtml-user-select          : none;
+  -moz-user-select            : none;
+  -ms-user-select             : none;
+  user-select                 : none;
+  -ms-touch-action            : pan-y;
+  touch-action                : pan-y;
+  -webkit-tap-highlight-color : transparent;
+}
+// height from slider change here
+.slick-list {
+  position : relative;
+  overflow : hidden;
+  display  : block;
+  margin   : 0;
+  padding  : 0;
+
+  &:focus {
+    outline : none;
+  }
+
+  &.dragging {
+    cursor : pointer;
+    cursor : hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform : translate3d(0, 0, 0);
+  -moz-transform    : translate3d(0, 0, 0);
+  -ms-transform     : translate3d(0, 0, 0);
+  -o-transform      : translate3d(0, 0, 0);
+  transform         : translate3d(0, 0, 0);
+  height            : 100%;
+}
+.slick-track {
+  position : relative;
+  left     : 0;
+  top      : 0;
+  display  : block;
+
+  &:before,
+  &:after {
+    content : "";
+    display : table;
+  }
+
+  &:after {
+    clear : both;
+  }
+
+  .slick-loading & {
+    visibility : hidden;
+  }
+}
+.slick-slide {
+  float   : left;
+
+  [dir="rtl"] & {
+    float : right;
+  }
+  img {
+    display : block;
+  }
+  &.slick-loading img {
+    display : none;
+  }
+
+  display : none;
+
+  &.dragging img {
+    pointer-events : none;
+  }
+
+  .slick-initialized & {
+    display : block;
+  }
+
+  .slick-loading & {
+    visibility : hidden;
+  }
+
+  .slick-vertical & {
+    display : block;
+    height  : auto;
+    border  : 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display : none;
+}
+/*=================================================================================================================================================================================================
+                                                                                            Slider Header
+================================================================================================= | =============================================================================================*/
+.header-slider, .slick-list {
+  display : none;
+
+  @include breakpoint(lg) {
+    display       : block;
+    z-index       : 10;
+    align-items   : center;
+    margin-bottom : 3rem;
+
+  }
+
+  .box {
+    display             : flex;
+    align-items         : center;
+    background-size     : cover;
+    background-position : 0 0;
+    height              : 320px;
+    padding             : $gap 0;
+
+    @include breakpoint(sm) {
+      height : 230px;
+    }
+
+    @include breakpoint(md) {
+      padding : $gap*2 0;
+    }
+
+    @include breakpoint(lg) {
+      padding : $gap*4 0;
+    }
+  }
+
+  .box-1 {
+    background-image : url("assets/images/slider-3.png");
+
+    .wordpress-logo {
+      display : none;
+
+      @include breakpoint(lg) {
+        display   : inherit;
+        font-size : rem(120px);
+        color     : $color-2;
+      }
+    }
+  }
+  .box-2 {
+    background-image : url("assets/images/slider-2.png");
+  }
+  .box-3 {
+    background-image : url("assets/images/slider-1.png");
+  }
+
+  //.slick-dots {
+  //
+  //}
+}
