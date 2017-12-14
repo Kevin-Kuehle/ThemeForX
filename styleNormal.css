@@ -3883,6 +3883,10 @@ Version: 0.1
     margin-bottom: 4.6666666667rem; }
     .row .row:last-of-type {
       margin-bottom: 0 !important; }
+  .row.overflowX {
+    overflow-x: auto !important;
+    display: block;
+    white-space: nowrap; }
   @media (min-width: 28.5em) {
     .row {
       justify-content: flex-start; }
@@ -3898,9 +3902,10 @@ Version: 0.1
       .row.full {
         min-width: 100% !important; }
         .row.full > .row {
-          margin-bottom: 0 !important; }
-      .row.va {
-        align-items: center; } }
+          margin-bottom: 0 !important; } }
+  @media (min-width: 62em) {
+    .row {
+      overflow-x: hidden; } }
 
 .fullRow {
   margin-bottom: 6.6666666667rem; }
@@ -5850,18 +5855,53 @@ ul.leistungen {
 
 table.packetLeistungen {
   width: 100%;
-  border: 1px dashed red;
   overflow: visible;
-  min-width: 44.4444444444rem; }
+  min-width: 44.4444444444rem;
+  padding: 2rem 0; }
+  table.packetLeistungen .logo {
+    max-height: 55px;
+    width: auto; }
   table.packetLeistungen tr:nth-last-of-type(odd) {
     background: #e0e0e0; }
     table.packetLeistungen tr:nth-last-of-type(odd).title th {
       padding: 0.6rem 0; }
+      table.packetLeistungen tr:nth-last-of-type(odd).title th.starter, table.packetLeistungen tr:nth-last-of-type(odd).title th.basic, table.packetLeistungen tr:nth-last-of-type(odd).title th.business {
+        font-weight: 400; }
+      table.packetLeistungen tr:nth-last-of-type(odd).title th.title {
+        background: linear-gradient(-75deg, #5494cd 0%, #467cc0 100%);
+        color: #ebebeb;
+        font-weight: 400; }
+      table.packetLeistungen tr:nth-last-of-type(odd).title th.starter {
+        background: linear-gradient(-75deg, #515b64 0%, #616d78 100%);
+        color: #ebebeb;
+        font-weight: 400; }
+      table.packetLeistungen tr:nth-last-of-type(odd).title th.basic {
+        background: linear-gradient(-75deg, #e5c13f 0%, #eacd4c 100%); }
+      table.packetLeistungen tr:nth-last-of-type(odd).title th.business {
+        background: linear-gradient(-75deg, #5494cd 0%, #467cc0 100%);
+        color: #ebebeb; }
   table.packetLeistungen tr td {
     text-align: center;
     padding: 0.2rem; }
     table.packetLeistungen tr td:first-of-type {
-      text-align: left; }
+      text-align: left;
+      padding-left: 18px; }
+    table.packetLeistungen tr td:last-of-type {
+      padding-right: 18px; }
+    table.packetLeistungen tr td.starter, table.packetLeistungen tr td.basic, table.packetLeistungen tr td.business {
+      min-width: 8.3333333333rem;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 400;
+      font-size: 0.8888888889rem;
+      border-top: 1px solid #ffff; }
+    table.packetLeistungen tr td.starter {
+      background: linear-gradient(-75deg, #515b64 0%, #616d78 100%);
+      color: #ebebeb; }
+    table.packetLeistungen tr td.basic {
+      background: linear-gradient(-75deg, #e5c13f 0%, #eacd4c 100%); }
+    table.packetLeistungen tr td.business {
+      background: linear-gradient(-75deg, #5494cd 0%, #467cc0 100%);
+      color: #ebebeb; }
 
 /*=================================================================================================================================================================================================
                                                                                                Buttons

@@ -92,5 +92,15 @@
   filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr='#9BC44E', endColorstr='#83B641', GradientType=1);
 }
 
+@mixin gradiant-blue-d {
+  background : linear-gradient(-75deg, #4981b3 0%, #3d6ca6 100%);
+}
+@mixin gradiant-grey-d {
+  background : linear-gradient(-75deg, rgba(#515B64, 1) 0%, rgba(#616D78, 1) 100%);
+}
+@mixin gradiant-yellow-d {
+  background : linear-gradient(-75deg, rgba(#E5C13F, 1) 0%, rgba(#EACD4C, 1) 100%);
+}
+
 
 

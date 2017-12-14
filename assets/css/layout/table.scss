@@ -2,9 +2,14 @@ table {
 
   &.packetLeistungen {
     width     : 100%;
-    border    : 1px dashed red;
     overflow  : visible;
     min-width : rem(800px);
+    padding   : 2rem 0;
+
+    .logo {
+      max-height : 55px;
+      width      : auto;
+    }
 
     tr {
       &:nth-last-of-type(odd) {background : #e0e0e0;
@@ -12,6 +17,27 @@ table {
         &.title {
           th {
             padding : 0.6rem 0;
+
+            &.starter, &.basic, &.business {
+              font-weight : 400;
+            }
+            &.title {
+              @include gradiant-blue;
+              color       : $light;
+              font-weight : 400;
+            }
+            &.starter {
+              @include gradiant-grey;
+              color       : $light;
+              font-weight : 400;
+            }
+            &.basic {
+              @include gradiant-yellow;
+            }
+            &.business {
+              @include gradiant-blue;
+              color : $light;
+            }
           }
         }
       }
@@ -20,10 +46,33 @@ table {
         text-align : center;
         padding    : 0.2rem;
         &:first-of-type {
-          text-align : left;
+          text-align   : left;
+          padding-left : $gap;
+        }
+        &:last-of-type {
+          padding-right : $gap;
+        }
+        &.starter, &.basic, &.business {
+          min-width   : rem(150px);
+          font-family : $title-font;
+          font-weight : 400;
+          font-size   : rem(16px);
+          border-top: 1px solid #ffff;
         }
 
+        &.starter {
+          @include gradiant-grey;
+          color : $light;
+        }
+        &.basic {
+          @include gradiant-yellow;
+        }
+        &.business {
+          @include gradiant-blue;
+          color : $light;
+        }
       }
     }
   }
+
 }
