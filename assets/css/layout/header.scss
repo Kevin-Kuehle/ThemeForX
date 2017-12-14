@@ -9,6 +9,8 @@
   flex-flow       : column nowrap;
   margin-bottom   : 3rem;
 
+  .page-template-page-leistungen & { margin: 0; }
+
   @include breakpoint(lg) {
     margin-bottom : 0;
   }

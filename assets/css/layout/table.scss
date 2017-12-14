@@ -1,0 +1,29 @@
+table {
+
+  &.packetLeistungen {
+    width     : 100%;
+    border    : 1px dashed red;
+    overflow  : visible;
+    min-width : rem(800px);
+
+    tr {
+      &:nth-last-of-type(odd) {background : #e0e0e0;
+
+        &.title {
+          th {
+            padding : 0.6rem 0;
+          }
+        }
+      }
+
+      td {
+        text-align : center;
+        padding    : 0.2rem;
+        &:first-of-type {
+          text-align : left;
+        }
+
+      }
+    }
+  }
+}

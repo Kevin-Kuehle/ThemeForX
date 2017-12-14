@@ -32,5 +32,4 @@
 		);
 		wp_nav_menu( $args ); ?>
     </div>
-    <p>djf</p>
 </header>

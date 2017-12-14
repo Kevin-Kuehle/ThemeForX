@@ -3,7 +3,7 @@
  Template Name: Impressum
 */ ?>
 <?php get_header(); ?>
-<div class="siteTitle impressum">
+<div class="pageTitle impressum">
     <h1><?php echo get_the_title(); ?></h1>
 </div>
 <main>

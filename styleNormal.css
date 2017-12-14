@@ -4724,7 +4724,7 @@ h2 {
   font-size: 1.4444444444rem;
   line-height: 120%;
   color: #23292e;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 1.3333333333rem; }
   .row > h2 {
     padding-left: 18px;
@@ -5120,6 +5120,8 @@ nachhacken wieso es geht.
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 3rem; }
+  .page-template-page-leistungen .header {
+    margin: 0; }
   @media (min-width: 62em) {
     .header {
       margin-bottom: 0; } }
@@ -5684,6 +5686,75 @@ nachhacken wieso es geht.
   .calltoActionEnd .row a {
     margin: 2rem auto 0 auto; }
 
+/* Leistungen */
+.pageTitle {
+  display: flex;
+  background-color: #6cc2cd;
+  padding: 2rem 0;
+  margin-bottom: 4rem; }
+  .pageTitle .wrap {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 18px;
+    margin: 0 auto; }
+  .pageTitle .text {
+    font-family: "Josefin Sans", sans-serif;
+    text-shadow: black 1px 1px 1px;
+    flex: 1;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center; }
+    .pageTitle .text h1 {
+      text-align: center;
+      font-size: 2.6666666667rem;
+      line-height: 100%;
+      color: #162030;
+      margin: 0; }
+      .pageTitle .text h1 span {
+        color: #ebebeb;
+        font-size: 1.6rem; }
+  .pageTitle .image {
+    display: none; }
+  @media (min-width: 47em) {
+    .pageTitle {
+      margin-bottom: 6.6666666667rem;
+      height: 100vh;
+      max-height: 15.2777777778rem;
+      padding: 0.2rem 0; }
+      .pageTitle .wrap {
+        display: flex; }
+      .pageTitle .text {
+        justify-content: flex-start;
+        justify-items: flex-start; }
+        .pageTitle .text h1 {
+          text-align: left;
+          font-size: 4.4444444444rem;
+          line-height: 80%; }
+          .pageTitle .text h1 span {
+            font-size: 2.2222222222rem; }
+      .pageTitle .image {
+        display: flex;
+        flex: 1;
+        flex-flow: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center; }
+        .pageTitle .image img {
+          flex: 1 0 100%;
+          max-height: 80%; } }
+
+ul.leistungen {
+  column-count: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 18px; }
+  @media (min-width: 47em) {
+    ul.leistungen {
+      column-count: 2; } }
+
 /*=================================================================================================================================================================================================
                                                                                             Global Classes
 ================================================================================================= | =============================================================================================*/
@@ -5758,6 +5829,39 @@ nachhacken wieso es geht.
       color: #82b541;
       display: inline-block;
       margin-right: 0.5rem; }
+
+.listStyle-2 {
+  list-style: none; }
+  .listStyle-2 i {
+    margin-right: 0.6666666667rem;
+    color: #82b541; }
+  .listStyle-2 li {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 0.5rem;
+    font-size: 0.8888888889rem;
+    line-height: 1.2777777778rem; }
+    .listStyle-2 li:before {
+      content: '\f046';
+      font-family: "kuehlewebdesignde";
+      color: #82b541;
+      display: inline-block;
+      margin-right: 0.5rem; }
+
+table.packetLeistungen {
+  width: 100%;
+  border: 1px dashed red;
+  overflow: visible;
+  min-width: 44.4444444444rem; }
+  table.packetLeistungen tr:nth-last-of-type(odd) {
+    background: #e0e0e0; }
+    table.packetLeistungen tr:nth-last-of-type(odd).title th {
+      padding: 0.6rem 0; }
+  table.packetLeistungen tr td {
+    text-align: center;
+    padding: 0.2rem; }
+    table.packetLeistungen tr td:first-of-type {
+      text-align: left; }
 
 /*=================================================================================================================================================================================================
                                                                                                Buttons
