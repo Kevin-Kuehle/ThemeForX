@@ -2,67 +2,26 @@
                                                                                                Content
 ================================================================================================= | =============================================================================================*/
 
-.siteTitle {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  min-height      : rem(270px * 0.5);
-  background      : url('../../uploads/2017/08/pad-impressum.jpg');
-  background-size : 100px auto;
-  padding         : 2rem;
-  margin-bottom   : 5rem;
-  position        : relative;
-
-  @include breakpoint(md) {
-    min-height : rem(270px * 0.7);
-  }
-
-  @include breakpoint(xl) {
-    min-height : rem(270px);
-  }
-
-  &:after {
-    position   : absolute;
-    top        : 0;
-    left       : 0;
-    width      : 100%;
-    height     : 100%;
-    content    : '';
-    background : linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 2%) fixed;
-  }
-
-  h1 {
-    color : $light;
-    @include text-shaddow;
-  }
-}
 /*=================================================================================================================================================================================================
                                                                                               Row Styles
 ================================================================================================= | =============================================================================================*/
 .rid-1 {
-
   p {
     text-align : left;
   }
-
-  & .row:nth-of-type(1) {
+  & .row:nth-of-type(1), .row:nth-of-type(2) {
 
     > :nth-child(2) {
       order : -1;
     }
-
   }
-
-  & .row:nth-of-type(2) {
-  }
-
   .col {
     display     : flex;
     align-items : center;
   }
-
   @include breakpoint(lg) {
-    & .row:nth-of-type(1) {
+
+    & .row:nth-of-type(1), .row:nth-of-type(2) {
       > :nth-child(2) {
         order : inherit;
       }
@@ -76,7 +35,7 @@
 }
 .claimStyle-1 {
   padding : rem(44px) 0;
-  @include gradiant-blue;
+  @include gradiant-business;
   @include box-shaddow;
 
   p {
@@ -98,14 +57,15 @@
       text-align : left;
     }
   }
-
   p {
     text-align : left;
   }
 
-  img {
-    max-height : 190px;
-    width      : auto;
+  .col {
+    img {
+      max-height : 190px;
+      width      : auto;
+    }
   }
 
   & * > img {
@@ -137,24 +97,9 @@
 
 }
 .leistungenKurzblick {
-  background    : $color-2;
-  padding-top   : $gap*1.3;
-  border-top    : 3px $color-1 solid;
-  overflow      : hidden;
-  position      : relative;
-  margin-bottom : rem(80px);
+  padding-top : $gap*1.3;
+  position    : relative;
 
-  &:before {
-    position   : absolute;
-    content    : '';
-    height     : 110px;
-    width      : 110px;
-    background : $color-1;
-    top        : -55px;
-    left       : 50%;
-    transform  : translateX(-50%) rotate(135deg) skew(30deg, 30deg);
-    box-shadow : #1a1a1a 10px -11px 12px 0px;
-  }
   .row {
     margin-bottom : 0;
     .col {
@@ -162,53 +107,32 @@
     }
   }
 
-  h2 {
-    color         : $color-1;
-    font-size     : rem(48px);
-    text-align    : center;
-    margin-top    : rem(60px) !important;
-    margin-bottom : rem(68px) !important;
-
-    b {
-      color       : $light;
-      font-weight : 300;
-    }
-  }
-
   h3 {
-    font-weight   : 300;
-    color         : $light;
+    font-weight   : 400;
+    color         : $color-2;
     display       : flex;
     flex-flow     : row;
     align-items   : flex-end;
-    margin-bottom : rem(20px);
+    margin-bottom : rem(13px);
     position      : relative;
 
     span {
-      font-size    : 32px;
-      color        : $color-1;
+      font-size    : 30px;
+      color        : $color-4;
       margin-right : rem(10px);
-    }
-
-    &:after {
-      position   : absolute;
-      content    : '';
-      height     : 1px;
-      width      : 100%;
-      top        : 130%;
-      left       : 0;
-      background : #999999;
+      align-self   : center;
     }
   }
-
   p {
-    color      : #999999;
+    color      : lighten($color-2, 25%);
     text-align : left;
+    font-size  : rem(14px);
   }
 
   .bottomBar {
-    width           : 100%;
-    background      : $color-1;
+    border-top      : 1px solid $color-5;
+    border-bottom   : 1px solid $color-5;
+    width           : 100vw;
     height          : auto;
     padding         : $gap 0;
     display         : flex;
@@ -217,13 +141,19 @@
     justify-content : center;
 
     p {
-      font-size   : rem(32px)*0.7;
-      color       : $light;
+      font-size   : rem(28px)*0.7;
+      color       : $color-5;
       font-weight : 300;
       text-align  : center;
 
       b {
         color : $color-2;
+      }
+    }
+    .btn {
+      margin-top : 1rem;
+      @include breakpoint(lg) {
+        margin : 0 0 0 $gap*2;
       }
     }
 
@@ -232,21 +162,16 @@
         font-size : rem(32px)*0.9;
       }
     }
-
     @include breakpoint(lg) {
-      flex-flow : row;
-      padding   : $gap 0;
+      flex-flow  : row;
+      padding    : $gap 0;
+      margin-top : 1.2rem;
+
       p {
-        font-size : rem(32px);
+        font-size : rem(30px);
       }
     }
 
-    .btn {
-      margin-top : 1rem;
-      @include breakpoint(lg) {
-        margin : 0 0 0 $gap*2;
-      }
-    }
   }
 }
 .visuellAnsprechend {
@@ -254,63 +179,109 @@
   p {
     text-align : left;
   }
-  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  .row {
+    &.r1 {
 
-  .r1 {
-    & > :nth-child(1) { order : 1; }
-    & > :nth-child(2) { order : -1; }
+      // "in der regel"
+      > :nth-child(2) {
+        order : 3;
+      }
 
-    @include breakpoint(md) {
-      & > :nth-child(1) { order : 1; }
-      & > :nth-child(2) { order : 2; }
+      // Bild 1
+      > :nth-child(3) {
+        order : 2;
+      }
+    }
+    &.r2 {
+
+      // Bild 1
+      > :nth-child(2) {
+        order : -1;
+      }
+    }
+    &.r3 {
+
+      // Bild 1
+      > :nth-child(2) {
+        order : -1;
+      }
     }
   }
 
-  .r2 {
-    & > :nth-child(1) { order : -1; }
-    & > :nth-child(2) { order : 1; }
+  @include breakpoint(md) {
+    .row {
+      &.r1 {
 
-    @include breakpoint(md) {
-      & > :nth-child(1) { order : 1; }
-      & > :nth-child(2) { order : 2; }
+        // "in der regel"
+        > :nth-child(2) {
+          order : inherit;
+        }
+
+        // Bild 1
+        > :nth-child(3) {
+          order : initial;
+        }
+      }
+      &.r2 {
+
+        // Bild 1
+        > :nth-child(2) {
+          order : inherit;
+        }
+      }
+      &.r3 {
+
+        // Bild
+        > :nth-child(2) {
+          order : inherit;
+        }
+      }
     }
   }
-
-  .r3 {
-    & > :nth-child(1) { order : 1; }
-    & > :nth-child(2) { order : -1; }
-
-    @include breakpoint(md) {
-      & > :nth-child(1) { order : 1; }
-      & > :nth-child(2) { order : 2; }
-    }
-  }
-
 }
 .KomfortableVerwaltung {
   img {
     max-height : rem(120px);
   }
-  .col {
-    margin-bottom : rem(26px);
-  }
 
-  @include breakpoint(lg) {
-    .col {
-      margin-bottom : rem(80px);
+  .col {
+
+    &:nth-of-type(1) {
+      margin-bottom : rem(44px);
+    }
+
+    @include breakpoint(lg) {
+      .col {
+        margin-bottom : rem(80px);
+      }
     }
   }
 }
 .SeoClaim {
-  height     : auto;
-  padding    : $gap*2 0;
-  background : linear-gradient(360deg, #2c3554 0%, #111c15 100%);
+  background : linear-gradient(-90deg, rgba(192, 213, 234, 1) 0%, rgba(201, 229, 255, 1) 100%);
+  padding    : 2rem 0;
   position   : relative;
+  display    : flex;
+  height     : auto;
+  @include removeGridMargins;
+
+  .image {
+    display         : flex;
+    align-content   : center;
+    align-items     : center;
+    justify-items   : center;
+    justify-content : center;
+  }
+
+  h3 {
+    color      : $color-5;
+    text-align : center;
+  }
 
   p {
-    color         : $light;
+    color         : $color-5;
     font-family   : $title-font;
-    font-size     : rem(28px) * 0.7;
+    font-size     : rem(22px) * 0.7;
     text-align    : center;
     margin-bottom : rem($gap);
     line-height   : rem(38px) * 0.7;
@@ -318,7 +289,6 @@
 
     b {
       font-family : $title-font;
-      color       : #fff;
       font-size   : rem(36px) * 0.7;
 
       &.color {
@@ -328,83 +298,60 @@
   }
 
   img {
-    display : none;
-
-    @include breakpoint(lg) {
-      &:nth-of-type(2) {
-        display  : inline-block;
-        width    : rem(75px);
-        position : absolute;
-        left     : 10%;
-        bottom   : 5%;
-      }
-
-      &:nth-of-type(3) {
-        display  : inline-block;
-        width    : rem(75px);
-        position : absolute;
-        left     : 53%;
-        bottom   : 18%;
-      }
-
-      &:nth-of-type(4) {
-        display  : inline-block;
-        width    : rem(75px);
-        position : absolute;
-        right    : 14%;
-        bottom   : 5%;
-      }
-    }
-
-    @include breakpoint(xl) {
-
-      &:nth-of-type(1) {
-        display  : inline-block;
-        width    : rem(75px);
-        position : absolute;
-        right    : 6%;
-        top      : 9%;
-        z-index  : 400;
-      }
-    }
+    max-height : 124px;
+    width      : auto;
   }
 
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   @include breakpoint(sm) {
-    height : rem(325px);
-
+    height : auto;
     p {
-      font-size   : rem(28px);
-      line-height : 38px;
+      font-size   : rem(20px);
+      line-height : 150%;
 
       b {
         font-size : rem(36px);
       }
     }
   }
-
   @include breakpoint(md) {
-    height      : rem(260px);
-    display     : flex;
     align-items : center;
-  }
+    padding     : 3rem 0;
+    .row {
+      .col {
+        margin : 0;
+      }
+    }
 
+    p {
+      text-align : left !important;
+    }
+
+    h3 {
+      text-align : left;
+    }
+  }
   @include breakpoint(lg) {
-    display : inherit;
-    height  : rem(325px);
+    padding : 4rem 0;
   }
 }
 .Suchmaschinenoptimierung {
-  .row {
 
-    & > :nth-child(3) {
-      order : -10;
+  h2 {
+    order : -2;
+  }
+  .col {
+    &:nth-of-type(2) {
+      order : -3;
     }
   }
-
   @include breakpoint(lg) {
-    .row {
 
-      & > :nth-child(3) {
+    h2 {
+      order : inherit;
+    }
+    .col {
+      &:nth-of-type(2) {
         order : inherit;
       }
     }
@@ -412,29 +359,19 @@
 
 }
 .Packetübersicht {
-  border-top            : $color-1 25px solid;
-  width                 : 100%;
-  background            : url('assets/images/packetPad.svg') left top;
-  background-size       : 600px auto;
-  background-attachment : fixed;
-  padding               : 2rem 0 0 0;
-  position              : relative;
-  margin-bottom         : 0 !important;
 
   h2 {
     font-family   : $title-font;
     font-size     : rem(48px) * $xs;
-    color         : $light;
+    color         : $color-2;
     font-weight   : 600;
     text-align    : center;
     margin-bottom : 3rem !important;
     padding       : 0 !important;
   }
-
   .col {
     margin-bottom : 0;
   }
-
   > span {
     padding    : 1rem 0;
     background : $color-3;
@@ -465,12 +402,11 @@
       margin-top : 0.8rem;
     }
   }
-
   .pack {
     width         : 100%;
     display       : flex;
     flex-flow     : column nowrap;
-    border-radius : rem(12px);
+    border-radius : rem(6px);
     margin-bottom : 3rem;
     cursor        : pointer;
     @include trans-2;
@@ -479,10 +415,23 @@
       flex : 1 0 auto;
     }
 
-    > .header {
+    .icon {
+      margin-bottom   : $gap;
+      display         : flex;
+      justify-content : center;
+      justify-items   : center;
+      align-content   : center;
+      align-items     : center;
+
+      img {
+        max-height : rem(60px);
+        width      : auto;
+      }
+    }
+    .header {
       height          : rem(78px);
       justify-content : center;
-      border-radius   : rem(9px) rem(9px) 0 0;
+      border-radius   : rem(0px) rem(12px) 0 0;
       box-shadow      : rgba($dark, 0.4) 0 2px 2px;
       margin-bottom   : 0;
 
@@ -495,7 +444,6 @@
         margin      : 0;
       }
     }
-
     .body {
       padding : 1rem 1.3rem;
 
@@ -546,39 +494,36 @@
 
       }
     }
-
     .footer {
       display         : flex;
       flex-flow       : row;
       justify-content : center;
       align-items     : center;
       height          : rem(40px);
-      border-radius   : 0 0 rem(9px) rem(9px);
-
-      span {
-        &.small {
-          font-size   : rem(12px);
-          font-weight : 300;
-          margin-left : rem(5px);
-        }
-      }
+      border-radius   : 0 0 rem(0px) rem(12px);
     }
 
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     &.starter {
 
+      * {
+        color : $dark;
+      }
+
       .header {
         @include gradiant-grey;
+        h3 {
+          color : $dark;
+        }
       }
       .body {
         @include gradiant-grey;
       }
       .footer {
-        background : #31373c;
-        color      : $light;
+        background : #d1d1d1;
+        color      : $dark;
       }
     }
-
     &.basic {
 
       h3, th, .footer {
@@ -597,41 +542,58 @@
         color      : $light;
       }
     }
-
     &.business {
 
       .header {
-        @include gradiant-blue;
+        @include gradiant-business-re;
       }
       .body {
-        @include gradiant-blue;
+        @include gradiant-business;
       }
       .footer {
-        background : #2a4b74;
+        background : #0e0e1d;
         color      : $light;
       }
     }
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  }
+  .callTo {
+    display     : flex;
+    flex-flow   : column nowrap;
+    align-items : center;
+
+    p {
+      font-family    : $title-font;
+      font-size      : rem(22px);
+      padding-bottom : 0.6rem;
+      text-align     : center;
+      color          : $color-3;
+
+      b {
+        font-size : rem(22px);
+      }
+    }
   }
 
   @include breakpoint(xs) {
     h2 {
       font-size : rem(48px) * $md;
     }
-
-    > span {
-      p {
-        font-size : rem(32px) * $md;
-      }
-    }
   }
-
   @include breakpoint(md) {
     h2 {
       font-size : rem(48px);
     }
-  }
+    .callTo {
+      p {
+        font-size : rem(28px);
 
+        b {
+          font-size : rem(28px);
+        }
+      }
+    }
+  }
   @include breakpoint(lg) {
     background-size : 200px auto;
     .pack {
@@ -640,24 +602,9 @@
         transform : translateY(-25px);
       }
     }
-
-    > span {
-
-      .row {
-        display         : flex;
-        flex-flow       : row;
-        justify-content : center;
-        align-items     : center;
-      }
-      .btn {
-        margin-top  : inherit;
-        margin-left : 1rem;
-      }
-    }
   }
 }
 .calltoActionEnd {
-  background      : $color-4;
   padding         : 5rem*0.7 0;
   display         : flex;
   justify-content : center;
@@ -676,7 +623,7 @@
   .row {
 
     h2 {
-      color       : $light;
+      color       : $color-2;
       font-family : $title-font;
       font-weight : 500;
       font-size   : rem(32px) * 0.8;
@@ -687,12 +634,12 @@
 
       span {
         color       : $color-1;
-        font-weight : 300;
+        font-weight : 400;
       }
     }
 
     p {
-      color : $light;
+      color : $color-2;
     }
 
     a {
@@ -701,7 +648,8 @@
   }
 
 }
-/* Leistungen */
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Leistungen
 .pageTitle {
   display          : flex;
   background-color : #6cc2cd;
@@ -783,13 +731,114 @@
 
 }
 ul.leistungen {
-  column-count: 1;
-  width: 100%;
-  max-width: $template-width;
-  padding: 0 $gap;
-  
+  column-count : 1;
+  width        : 100%;
+  max-width    : $template-width;
+  padding      : 0 $gap;
+
   @include breakpoint(md) {
     column-count : 2;
+  }
+}
+.projektContainer {
+  position    : relative;
+  margin-left : 46px;
+
+  &:before {
+    content    : '';
+    height     : 90.2%;
+    width      : 1px;
+    background : $color-4;
+    position   : absolute;
+    left       : -33px;
+  }
+  .station {
+    margin-bottom : 2rem;
+    position      : relative;
+
+    &:before {
+      content       : '';
+      font-family   : $title-font;
+      position      : absolute;
+      left          : -47px;
+      background    : $color-3;
+      border-radius : 50%;
+      height        : 30px;
+      width         : 30px;
+      text-align    : center;
+      color         : $light;
+      line-height   : 33px;
+
+      &.st-2 & {
+        content : '2';
+      }
+    }
+
+    &.st-1 {
+      &:before {
+        content : '1';
+      }
+    }
+    &.st-2 {
+      &:before {
+        content : '2';
+      }
+    }
+    &.st-3 {
+      &:before {
+        content : '3';
+      }
+    }
+    &.st-4 {
+      &:before {
+        content : '4';
+      }
+    }
+    &.st-5 {
+      &:before {
+        content : '5';
+      }
+    }
+    &.st-6 {
+      &:before {
+        content : '6';
+      }
+    }
+    &.st-7 {
+      &:before {
+        content : '7';
+      }
+    }
+    &.st-8 {
+      &:before {
+        content : '8';
+      }
+    }
+  }
+  h3 {
+    font-size     : rem(18px);
+    margin-bottom : 0.2rem;
+  }
+  p {
+    color       : lighten($color-2, 20%);
+    font-size   : rem(15px);
+    font-weight : 400;
+  }
+}
+.projektAblauf {
+  .infos {
+    h4 {
+      color       : $color-1;
+      font-weight : 400;
+    }
+
+    p {
+      font-size   : rem(14px);
+      font-weight : 400;
+      font-style  : italic;
+      color       : lighten($color-2, 20%);
+    }
+
   }
 }
 /*=================================================================================================================================================================================================
@@ -809,13 +858,10 @@ ul.leistungen {
     top              : 0;
   }
 }
-.center {
-  text-align : center;
-}
 .claim {
   font-style  : normal;
   font-family : $title-font;
-  font-size   : rem(26px);
+  font-size   : rem(20px);
   color       : $light;
   line-height : 140%;
   font-weight : 300;
@@ -825,6 +871,11 @@ ul.leistungen {
     font-weight : 500;
     color       : $light;
   }
+
+  @include breakpoint(lg) {
+    font-size : rem(26px);
+  }
+
 }
 .whiteContent {
   p, i, b, h1, h6, h5, h4, h3, h2, h1 & { color : $white; }
@@ -835,9 +886,12 @@ ul.leistungen {
 .inset-shaddow {
   box-shadow : 0 3px 4.1px rgba(0, 0, 0, 0.2) inset;
 }
-.circle {
-  height           : 186px;
-  width            : 186px;
-  background-color : $color-1;
-  border-radius    : 50%;
+.overflowX {
+  overflow-x : auto;
+  display    : block;
+  max-width  : 100vw;
+  
+  @include breakpoint(md) {
+      max-width: $template-width;
+  }
 }

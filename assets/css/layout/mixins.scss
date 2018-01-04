@@ -7,14 +7,18 @@
   }
   zoom : 1;
 }
-//  TextOptimizer -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-@mixin TextOptimizer {
+//  textOptimizer -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin textOptimizer {
   -webkit-font-smoothing : antialiased !important;
   text-shadow            : 1px 1px 1px 1px rgba(0, 0, 0, 0.005);
 }
+@mixin nav-style {
+  font-family : $main-font;
+  font-size   : rem(16px);
+  font-weight : 300;
+  @include textOptimizer;
+}
 //  After menus -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 @mixin after_line {
   &:after {
     content    : '';
@@ -72,11 +76,11 @@
   transition : all 1.4s;
 }
 // Gradians ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@mixin gradiant-blue {
+@mixin gradiant-business {
   background : linear-gradient(-75deg, #5494cd 0%, #467cc0 100%);
 }
 @mixin gradiant-grey {
-  background : linear-gradient(-75deg, rgba(#515B64, 1) 0%, rgba(#616D78, 1) 100%);
+  background : linear-gradient(-120deg, rgba(248, 248, 248, 1) 0%, rgba(243, 243, 243, 1) 100%);
 }
 @mixin gradiant-yellow {
   background : linear-gradient(-75deg, rgba(#E5C13F, 1) 0%, rgba(#EACD4C, 1) 100%);
@@ -91,15 +95,25 @@
   background : linear-gradient(90deg, rgba(155, 196, 78, 1) 0%, rgba(131, 182, 65, 1) 100%);
   filter     : progid:DXImageTransform.Microsoft.gradient(startColorstr='#9BC44E', endColorstr='#83B641', GradientType=1);
 }
-
-@mixin gradiant-blue-d {
-  background : linear-gradient(-75deg, #4981b3 0%, #3d6ca6 100%);
+@mixin gradiant-business {
+  background : linear-gradient(-120deg, rgba(30, 44, 67, 1) 0%, rgba(22, 32, 48, 1) 100%);
+}
+@mixin gradiant-business-re {
+  background : linear-gradient(-75deg, rgba(26, 38, 57, 1) 0%, rgba(22, 32, 48, 1) 100%);
 }
 @mixin gradiant-grey-d {
-  background : linear-gradient(-75deg, rgba(#515B64, 1) 0%, rgba(#616D78, 1) 100%);
+  background : linear-gradient(-120deg, rgba(248, 248, 248, 1) 0%, rgba(243, 243, 243, 1) 100%);
 }
 @mixin gradiant-yellow-d {
   background : linear-gradient(-75deg, rgba(#E5C13F, 1) 0%, rgba(#EACD4C, 1) 100%);
+}
+@mixin removeGridMargins {
+  .row {
+    margin-bottom: 0;
+    .col {
+      margin-bottom: 0;
+    }
+  }
 }
 
 

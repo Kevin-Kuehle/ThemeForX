@@ -2,7 +2,7 @@
 export default function () {
 
 
-	let button = document.querySelectorAll('.nav-botton');
+	let button = document.querySelectorAll('.nav-button');
 	let wrapElement = document.querySelectorAll('.canvasWrap');
 	let mobileNav = document.querySelector('.mobile-nav');
 	let topBar = document.querySelector('.topBar');

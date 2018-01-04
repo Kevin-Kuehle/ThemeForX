@@ -82,6 +82,10 @@ var _pricingTable = __webpack_require__(3);
 
 var _pricingTable2 = _interopRequireDefault(_pricingTable);
 
+var _formHandler = __webpack_require__(4);
+
+var _formHandler2 = _interopRequireDefault(_formHandler);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	(0, _slider2.default)();
 	(0, _mobileNav2.default)();
 	(0, _pricingTable2.default)();
+	(0, _formHandler2.default)();
 });
 
 /***/ }),
@@ -104,7 +109,7 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function () {
 
-	var button = document.querySelectorAll('.nav-botton');
+	var button = document.querySelectorAll('.nav-button');
 	var wrapElement = document.querySelectorAll('.canvasWrap');
 	var mobileNav = document.querySelector('.mobile-nav');
 	var topBar = document.querySelector('.topBar');
@@ -200,6 +205,35 @@ exports.default = function () {
 			_loop(i);
 		}
 	}
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function () {
+
+	var Button = document.querySelector('.anfrage');
+	var getAllFormWraps = document.querySelectorAll('.formWrap');
+	var FormBox = document.querySelector('.formBox');
+	var close = document.querySelector('.close');
+
+	Button.addEventListener('click', function () {
+		getAllFormWraps[0].classList.toggle('hide');
+	});
+
+	document.addEventListener('click', function (e) {
+		if (e.target === getAllFormWraps[0] || e.target === close) {
+			getAllFormWraps[0].classList.add('hide');
+		}
+	});
 };
 
 /***/ })

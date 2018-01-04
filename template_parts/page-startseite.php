@@ -10,13 +10,12 @@ get_header(); ?>
     </div>
     <main>
         <div class="row title">
-            <div class="col">
-                <h1><b>Kühle-Webdesign in Berlin erstellt für Ihr Unternehmen</b> responsive
-                    <wbr>
-                    Webseite, die Ihre Marketingstrategie wirkungsvoll unterstützt.
-                </h1>
-            </div>
+            <h1><b>Kühle-Webdesign in Berlin erstellt für Ihr Unternehmen</b> responsive
+                <wbr>
+                Webseite, die Ihre Marketingstrategie wirkungsvoll unterstützt.
+            </h1>
         </div>
+
 
         <div class="row va rid-1">
             <div class="row">
@@ -28,16 +27,14 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri() ?> /assets/images/searchWebsite.svg" alt="">
                 </div>
             </div>
-
-
             <div class="row">
-                <div class="md-3 col img lg-4 center">
-                    <img src="<?php echo get_template_directory_uri() ?> /assets/images/Website_Erstellen.svg" alt="">
-                </div>
                 <div class="md-9 col lg-8">
                     <p>Damit eine Webmarketingstrategie klappen kann, müssen erst <b>Grundlagen geschaffen werden</b>. Dazu gehört eine <b>professionelle Website</b>, die in Sachen Funktionalität
                         und
                         Design genau den Anforderungen einer Marketingstrategie entspricht.</p>
+                </div>
+                <div class="md-3 col img lg-4 center">
+                    <img src="<?php echo get_template_directory_uri() ?> /assets/images/Website_Erstellen.svg" alt="">
                 </div>
             </div>
         </div>
@@ -64,26 +61,23 @@ get_header(); ?>
         </div>
 
         <div class="row zielgerichtetenWeblösungen">
-            <h2 class="col">Erstellen von <b>zielgerichteten Weblösungen</b></h2>
+            <h2>Erstellen von <b>zielgerichteten Weblösungen</b></h2>
             <div class="col lg-9">
                 <p>Mit einer durchdachten Marketingstrategie können Sie diese Abnehmer mühelos erreichen. Um Erfolg zu haben, ist eine gute
                     Vorbereitung notwendig. Sie müssen das Ziel Ihrer Website bestimmen. Danach können die Möglichkeiten der Umsetzung evaluiert
                     werden. Eine frühzeitige Definition dieser Dinge ist wichtig, weil davon Optik und Funktionalität der Website abhängen.</p>
-
                 <p>Das Ziel Ihrer Internetpräsenz könnte die Vermarktung einer Marke sein. Auf einer Internetseite lassen sich Produkte der jeweiligen
                     Marke beschreiben und präsentieren. Social Media könnten auf die Website verweisen, um noch mehr Interessenten für Ihr
                     Produkt zu überzeugen.</p>
             </div>
-
-            <div class="col img lg-3">
-                <img src=" <?php echo get_template_directory_uri() . '/assets/images/Zielgerichtete_Weblösung.svg' ?> " alt="">
+            <div class="col lg-3 img">
+                <img src=" <?php echo get_template_directory_uri() . '/assets/images/Zielgerichtete_Weblösung.svg' ?> " alt="Zielgerichtete Weblösung bei - Kühle-Webdesign">
             </div>
         </div>
 
-        <div class="Fullrow leistungenKurzblick">
+        <div class="fullRow leistungenKurzblick">
             <div class="row">
-                <h2 class="col">Kurzüberblick <b>der Leistungen</b></h2>
-
+                <h2><b>Kurzüberblick</b> der Leistungen</h2>
                 <div class="col sm-6 lg-4">
                     <h3><span class="icon-wordpress"></span>Wordpress als CMS</h3>
                     <p>Wenn Ihre Website eine Marke promoten soll, brauchen
@@ -132,8 +126,8 @@ get_header(); ?>
         </div>
 
         <div class="row visuellAnsprechend">
-            <h2><b>Visuell ansprechend</b> und benutzerfreundlich</h2>
             <div class="row r1">
+                <h2><b>Visuell ansprechend</b> und benutzerfreundlich</h2>
                 <div class="col md-9">
                     <p>Die Regel "der erste Eindruck zählt" bewährt sich auch im Zusammenhang mit der Optik einer Website. Der erste
                         Eindruck entsteht, sobald ein Besucher Ihre Webseite öffnet. Dies ist der Augenblick, in dem ein potenzieller
@@ -145,13 +139,13 @@ get_header(); ?>
                 <div class="col img md-3"><img src="<?php echo get_template_directory_uri() . '/assets/images/VisuellAnsprechend.svg' ?>" alt=""></div>
             </div>
             <div class="row r2">
-                <div class="col img md-3"><img src="<?php echo get_template_directory_uri() . '/assets/images/WachstumFlower.svg' ?>" alt=""></div>
                 <div class="col md-9">
                     <p>Für ein bestmögliches Nutzerlebnis sorgt eine Balance aus Grafik und Inhalt. Ich achte darauf, dass nicht nur die
                         Projekteigenschaften zum Ausdruck kommen, sondern die Optik auch zur Zielgruppe passt. Die individuelle Anpassung
                         und eine benutzerfreundliche Navigation tragen zur Verweildauer und schließlich zum Erfolg Ihres Projekts
                         bei.</p>
                 </div>
+                <div class="col img md-3"><img src="<?php echo get_template_directory_uri() . '/assets/images/WachstumFlower.svg' ?>" alt=""></div>
             </div>
             <div class="row r3">
                 <div class="col md-9">
@@ -166,18 +160,15 @@ get_header(); ?>
         </div>
 
         <div class="row KomfortableVerwaltung">
-            <div class="col img md-3">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/WordPress_Logo.svg' ?>" alt="">
-            </div>
 
-            <div class="col md-9">
-                <h2><b>Komfortable Verwaltung</b> für jedermann mit Wordpress</h2>
+            <h2><b>Komfortable Verwaltung</b> für jedermann mit Wordpress</h2>
+
+            <div class="col md-8">
+
                 <p>Die Websites von Kuehle-Design sind in ein benutzerfreundliches CMS namens Wordpress ausgestattet. Nicht
                     nur Ihre Besucher genießen hervorragenden Nutzkomfort, sondern auch Sie als Betreiber freuen sich über ein
                     schnelles und bequemes Management Ihrer Website.</p>
-            </div>
 
-            <div class="col md-8">
                 <p>Nachdem ich Ihre responsive Website fertiggestellt habe, können Sie Ihre Internetpräsenz selbst verändern und
                     einstellen wie in einem Betriebssystem, ganz ohne Programmierkenntnisse. Sie erwartet ein grafischer Administrationsbereich,
                     wo sich die komplette Webseite per Mausklick managen lässt.</p>
@@ -195,31 +186,28 @@ get_header(); ?>
 
         <div class="fullRow claim SeoClaim">
             <div class="row">
-                <div class="col">
+                <div class="col md-8">
+                    <h3>Mit meinen Webseiten werden Sie im Internet gefunden</h3>
                     <p>Heutzutage ist SEO ein wichtiger Faktor, denn immer mehr Internetnutzer suchen
                         nach Produkten und Dienstleistungen unter dem Einsatz von Suchanbietern.</p>
-                    <p><b>Mit meinen Webseiten</b> <b class="color">werden Sie im Internet gefunden</b></p>
+                </div>
+                <div class="col image md-4">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/seoClaimImage.svg' ?>" alt="Suchmachinen Optimierung bei - Kühle-Webdesign">
                 </div>
             </div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/rocket.svg' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/cloudOne.svg' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/cloudTwo.svg' ?>" alt="">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/cloudThree.svg' ?>" alt="">
         </div>
 
         <div class="row Suchmaschinenoptimierung">
-            <div class="row">
-                <h2><b>Maximale Reichweite</b> dank Suchmaschinen&shyoptimierung</h2>
-                <div class="col lg-9">
-                    <p>Die Erfolgschancen Ihrer Internetpräsenz lassen sich durch Suchmaschinenoptimierung (SEO) optimieren. Das Ziel von SEO ist zu bewirken, dass die eigenen Webseiten für ein
-                        oder
-                        mehrere Keywords so hoch wie möglich in den Suchmaschinenergebnissen auftauchen. Je höher die Positionen bei Google und Co. sind, desto höher die Chance, dass potenzielle
-                        Kunden Einträge auswählen, die zu Ihrer Webseite verlinken.Aus diesem Grund sind die Websites von Kuehle-Webdesign in automatische Maßnahmen zur Suchmaschinenoptimierung
-                        ausgestattet. Die Websitestruktur ist ebenso bereit für externe SEO-Maßnahmen.</p>
-                </div>
-                <div class="col img lg-3">
-                    <img src=" <?php echo get_template_directory_uri() . '/assets/images/Suchmaschinenoptimierung.svg' ?> " alt="">
-                </div>
+            <h2><b>Maximale Reichweite</b> dank Suchmaschinen&shyoptimierung</h2>
+            <div class="col lg-9">
+                <p>Die Erfolgschancen Ihrer Internetpräsenz lassen sich durch Suchmaschinenoptimierung (SEO) optimieren. Das Ziel von SEO ist zu bewirken, dass die eigenen Webseiten für ein
+                    oder
+                    mehrere Keywords so hoch wie möglich in den Suchmaschinenergebnissen auftauchen. Je höher die Positionen bei Google und Co. sind, desto höher die Chance, dass potenzielle
+                    Kunden Einträge auswählen, die zu Ihrer Webseite verlinken.Aus diesem Grund sind die Websites von Kuehle-Webdesign in automatische Maßnahmen zur Suchmaschinenoptimierung
+                    ausgestattet. Die Websitestruktur ist ebenso bereit für externe SEO-Maßnahmen.</p>
+            </div>
+            <div class="col img lg-3">
+                <img src=" <?php echo get_template_directory_uri() . '/assets/images/Suchmaschinenoptimierung.svg' ?> " alt="">
             </div>
             <div class="col">
                 <p class="greenBar"> Da bei der Suchmaschinenoptimierung hochwertiger und einzigartiger Inhalt eine grundlegende Rolle spielt, biete ich meinen Kunden, die fertige Webseite mit
@@ -228,127 +216,132 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="fullRow Packetübersicht">
-            <div class="row">
-                <h2>Paketübersicht</h2>
-
-                <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
-                    <div class="pack starter">
-                        <div class="header"><h3>Starter</h3></div>
-                        <div class="body">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Anzahl Seiten</th>
-                                    <th>Responsive Design</th>
-                                    <th>Lizenzierte Profibilder</th>
-                                    <th>Kontaktformular</th>
-                                    <th>Besucherstatistiken</th>
-                                    <th>SSL Verschlüsselung</th>
-                                    <th>Google Maps</th>
-                                    <th>Speicherplatz</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th>bis 4</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>3</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-cross red"></span></th>
-                                    <th><span class="icon-cross red"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>1GB</th>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="footer"> 64,99€<span class="small">/mtl.</span></div>
+        <div class="row Packetübersicht">
+            <h2>Paketübersicht</h2>
+            <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
+                <div class="pack starter">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/iconStarter.svg ' ?>" alt="Starter Packet - Kühle-Webdesign">
                     </div>
-                </div>
-                <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
-                    <div class="pack basic">
-                        <div class="header"><h3>Basic</h3></div>
-                        <div class="body">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Anzahl Seiten</th>
-                                    <th>Responsive Design</th>
-                                    <th>Lizenzierte Profibilder</th>
-                                    <th>Kontaktformular</th>
-                                    <th>Besucherstatistiken</th>
-                                    <th>SSL Verschlüsselung</th>
-                                    <th>Google Maps</th>
-                                    <th>Speicherplatz</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th>bis 8</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>6</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>2GB</th>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="footer">110€<span class="small">/mtl.</span></div>
+                    <div class="header"><h3>Starter</h3></div>
+                    <div class="body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Anzahl Seiten</th>
+                                <th>Responsive Design</th>
+                                <th>Lizenzierte Profibilder</th>
+                                <th>Kontaktformular</th>
+                                <th>Besucherstatistiken</th>
+                                <th>SSL Verschlüsselung</th>
+                                <th>Google Maps</th>
+                                <th>Speicherplatz</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>bis 4</th>
+                                <th><span class="icon-check"></span></th>
+                                <th>3</th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-cross red"></span></th>
+                                <th><span class="icon-cross red"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th>1GB</th>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <div class="footer"> 64,99€<span class="small">/mtl.</span></div>
                 </div>
-                <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
-                    <div class="pack business">
-                        <div class="header"><h3>Business</h3></div>
-                        <div class="body">
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Anzahl Seiten</th>
-                                    <th>Responsive Design</th>
-                                    <th>Lizenzierte Profibilder</th>
-                                    <th>Kontaktformular</th>
-                                    <th>Besucherstatistiken</th>
-                                    <th>SSL Verschlüsselung</th>
-                                    <th>Google Maps</th>
-                                    <th>Speicherplatz</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th>bis 12</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>10</th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th><span class="icon-check"></span></th>
-                                    <th>5GB</th>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="footer">159,99€<span class="small">/mtl.</span></div>
-                    </div>
-                </div>
-
             </div>
-            <span>
-                <div class="row col">
-                    <p>Mehr Informationen <b>erfahren sie unter:</b></p> <a href="" class="btn btn-1"><span class="icon-rocket"></span>Pakete & Preise</a>
+            <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
+                <div class="pack basic">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/iconBasic.svg' ?>" alt="Starter Packet - Kühle-Webdesign">
+                    </div>
+                    <div class="header"><h3>Basic</h3></div>
+                    <div class="body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Anzahl Seiten</th>
+                                <th>Responsive Design</th>
+                                <th>Lizenzierte Profibilder</th>
+                                <th>Kontaktformular</th>
+                                <th>Besucherstatistiken</th>
+                                <th>SSL Verschlüsselung</th>
+                                <th>Google Maps</th>
+                                <th>Speicherplatz</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>bis 8</th>
+                                <th><span class="icon-check"></span></th>
+                                <th>6</th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th>2GB</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer">110€<span class="small">/mtl.</span></div>
                 </div>
-            </span>
+            </div>
+            <div class="col prefix-xs-1 xs-10 suffix-xs-1 prefix-sm-2 sm-8 suffix-sm-2 prefix-md-3 md-6 suffix-md-3  prefix-lg-0 lg-4 suffix-lg-0">
+                <div class="pack business">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/BusinessPack_diagonal.svg' ?>" alt="Starter Packet - Kühle-Webdesign">
+                    </div>
+                    <div class="header"><h3>Business</h3></div>
+                    <div class="body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Anzahl Seiten</th>
+                                <th>Responsive Design</th>
+                                <th>Lizenzierte Profibilder</th>
+                                <th>Kontaktformular</th>
+                                <th>Besucherstatistiken</th>
+                                <th>SSL Verschlüsselung</th>
+                                <th>Google Maps</th>
+                                <th>Speicherplatz</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>bis 12</th>
+                                <th><span class="icon-check"></span></th>
+                                <th>10</th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th><span class="icon-check"></span></th>
+                                <th>5GB</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer">159,99€<span class="small">/mtl.</span></div>
+                </div>
+            </div>
+            <div class="col callTo">
+                <p>Mehr Informationen <b>erfahren sie unter:</b></p> <a href="" class="btn btn-1"><span class="icon-rocket"></span>Pakete & Preise</a>
+            </div>
         </div>
 
         <div class="fullRow calltoActionEnd">
             <div class="row">
                 <h2>Professionelle Websites erstellen lassen <span>bei Kuehle-Webdesign.</span></h2>
-                <p>Bevor ich ein Projekt erstellen kann, erhalten Sie eine professionelle Beratung, die auf Ihre Wünsche und die Anforderungen Ihrer Besucher
-                    eingeht. Lassen Sie uns gemeinsam eine erfolgreiche Website erstellen!</p>
-                <a href="#" class="btn btn-1"><span class="icon-pencil"></span>Anfrage senden</a>
+                <div class="col">
+                    <p>Bevor ich ein Projekt erstellen kann, erhalten Sie eine professionelle Beratung, die auf Ihre Wünsche und die Anforderungen Ihrer Besucher
+                        eingeht. Lassen Sie uns gemeinsam eine erfolgreiche Website erstellen!</p>
+                    <a href="#" class="btn btn-1"><span class="icon-pencil"></span>Anfrage senden</a>
+                </div>
             </div>
         </div>
 

@@ -5,10 +5,8 @@ Version: 0.1
 */
 //------------------------------------------------------- Settings -----------------------------------------------------
 @import 'config';
-@import 'layout/mixins';
-@import 'layout/breakpoints';
+@import 'layout/typo';
 @import 'layout/columns';
-@import 'layout/grid';
 @import 'icon-font';
 @import 'layout/gridSystem';
 @import 'layout/globals';

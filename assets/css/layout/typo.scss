@@ -1,0 +1,187 @@
+/*=================================================================================================================================================================================================
+                                                                                            Config Typo
+================================================================================================= | =============================================================================================*/
+$main-font : 'Roboto', sans-serif;
+$title-font : 'Josefin Sans', sans-serif;
+$icon-font : 'kuehlewebdesignde';
+
+$xs : 0.70;
+$sm : 0.75;
+$md : 0.85;
+$lg : 0.95;
+$xl : 1;
+
+$font-size : 16px;
+$line-height : 150%;
+$font-margin-bottom : rem(12px);
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+p {
+  font-family   : $main-font;
+  line-height   : $line-height;
+  font-size     : $font-size;
+  font-weight   : 400;
+  color         : lighten($color-2, 10%);
+  margin-bottom : $font-margin-bottom;
+  position      : relative;
+  @include textOptimizer;
+
+  &:only-of-type, &:last-of-type, &:last-of-type > .row {
+    margin-bottom : 0 !important;
+  }
+
+  @include breakpoint(sm) {
+    font-size   : $font-size;
+    line-height : $line-height;
+  }
+
+  strong {
+    font-family : $main-font;
+    font-style  : italic;
+    color       : $color-1;
+  }
+
+  b {
+    font-family : $main-font;
+    font-style  : normal;
+    color       : $color-2;
+
+    &.light {
+      color : $light;
+    }
+
+  }
+}
+/*=================================================================================================================================================================================================
+                                                                                            Überschriften
+================================================================================================= | =============================================================================================*/
+h1, h2, h3, h4, h5, h6 {
+  font-family : $title-font;
+  display     : block;
+  line-height : 150%;
+  @include textOptimizer;
+
+  .row > & {
+    flex : 1 0 100%;
+  }
+
+  td > & {
+    padding: 0;
+  }
+  &.col {
+    margin-bottom : 0;
+  }
+
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h1-phone-size : rem(32px);
+$h1-tablet-size : rem(35px);
+$h1-desktop-size : rem(36px);
+$h1-margin-bottom : rem(80px);
+
+h1 {
+  font-size     : $h1-phone-size;
+  margin-bottom : $h1-margin-bottom * $xs;
+  color         : $color-2;
+  font-family   : $title-font;
+  text-align    : center;
+  font-weight   : 400;
+  padding       : 0 $gap;
+
+  b {
+    color : $color-1;
+  }
+
+  @include breakpoint(sm) {
+    font-size     : $h1-phone-size;
+    margin-bottom : $h1-margin-bottom * $sm;
+  }
+  @include breakpoint(md) {
+    font-size     : $h1-tablet-size;
+    margin-bottom : $h1-margin-bottom * $md;
+  }
+  @include breakpoint(lg) {
+    font-size     : $h1-desktop-size;
+    margin-bottom : $h1-margin-bottom * $lg;
+  }
+
+  @include breakpoint(xl) {
+    font-size     : $h1-desktop-size;
+    margin-bottom : $h1-margin-bottom * $xl;
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h2-phone-size : rem(28px);
+$h2-tablet-size : rem(30px);
+$h2-desktop-size : rem(32px);
+$h2-margin-bottom : rem(40px);
+
+h2 {
+  font-size     : $h2-phone-size;
+  margin-bottom : $h2-margin-bottom * $xs;
+  color         : $color-2;
+  font-weight   : 400;
+  padding       : 0 $gap;
+
+  @include breakpoint(sm) {
+    font-size     : $h2-phone-size;
+    margin-bottom : $h2-margin-bottom * $sm;
+  }
+  @include breakpoint(md) {
+    font-size     : $h2-tablet-size;
+    margin-bottom : $h2-margin-bottom * $md;
+  }
+  @include breakpoint(lg) {
+    font-size     : $h2-desktop-size;
+    margin-bottom : $h2-margin-bottom * $lg
+  }
+  @include breakpoint(xl) {
+    font-size     : $h2-desktop-size;
+    margin-bottom : $h2-margin-bottom * $xl;
+  }
+
+  b {
+    color       : $color-1;
+    font-weight : 600;
+  }
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h3-base-size : rem(24px);
+$h3-margin-bottom : rem(16px);
+
+h3 {
+  font-size     : $h3-base-size;
+  margin-bottom : $h3-margin-bottom;
+  color         : $color-2;
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h4-base-size : rem(36px);
+$h4-margin-bottom : rem(90px);
+
+h4 {
+  font-size     : $h4-base-size;
+  margin-bottom : $h4-margin-bottom;
+  color         : $color-2;
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h5-base-size : rem(36px);
+$h5-margin-bottom : rem(90px);
+
+h5 { font-size  : $h5-base-size;
+  margin-bottom : $h5-margin-bottom;
+  color         : $color-2;
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h6-base-size : rem(36px);
+$h6-margin-bottom : rem(90px);
+
+h6 {
+  font-size     : $h6-base-size;
+  margin-bottom : $h6-margin-bottom;
+  color         : $color-2;
+}
+/*=================================================================================================================================================================================================
+                                                                                           Other Elements
+================================================================================================= | =============================================================================================*/
+b { font-weight : 500; }
+i { font-family : $main-font; }

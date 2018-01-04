@@ -2,10 +2,18 @@ table {
 
   &.packetLeistungen {
     width     : 100%;
-    overflow  : visible;
+    overflow  : auto;
     min-width : rem(800px);
     padding   : 2rem 0;
 
+    .tableHead {
+      td:first-child {
+        padding : 0;
+      }
+      h2 {
+        margin-bottom : rem(20px);
+      }
+    }
     .logo {
       max-height : 55px;
       width      : auto;
@@ -22,7 +30,7 @@ table {
               font-weight : 400;
             }
             &.title {
-              @include gradiant-blue;
+              @include gradiant-business;
               color       : $light;
               font-weight : 400;
             }
@@ -35,44 +43,54 @@ table {
               @include gradiant-yellow;
             }
             &.business {
-              @include gradiant-blue;
+              @include gradiant-business;
               color : $light;
             }
           }
         }
       }
 
+      &.title {
+        .starter {
+          color : $dark !important;
+        }
+
+        .business {
+          font-weight : 300 !important;
+        }
+      }
+
       td {
         text-align : center;
-        padding    : 0.2rem;
+        padding    : 0.2rem 0.5rem;
         &:first-of-type {
-          text-align   : left;
-          padding-left : $gap;
+          text-align : left;
         }
-        &:last-of-type {
-          padding-right : $gap;
-        }
+
         &.starter, &.basic, &.business {
           min-width   : rem(150px);
           font-family : $title-font;
           font-weight : 400;
-          font-size   : rem(16px);
-          border-top: 1px solid #ffff;
+          font-size   : rem(15px);
+          border-top  : 1px solid #ffff;
+        }
+        &.starter {
+          border-top : 1px solid rgba($dark, 0.2);
         }
 
         &.starter {
           @include gradiant-grey;
-          color : $light;
+          color : $dark;
         }
         &.basic {
           @include gradiant-yellow;
         }
         &.business {
-          @include gradiant-blue;
-          color : $light;
+          @include gradiant-business;
+          color       : $light;
+          font-weight : 300;
         }
       }
     }
   }
-
 }

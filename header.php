@@ -16,13 +16,16 @@
     <body <?php body_class(); ?>>
 <header class="header">
     <div class="topBar">
-        <button class="toggle nav-botton icon-ellipsis-h"></button>
+        <button class="toggle nav-button icon-ellipsis-h"></button>
         <div class="infos">
-                <span class="header-logo-box">
-                        <object class="logo" width="75" data="<?php echo bloginfo( 'url' ) ?>/wp-content/uploads/2017/07/logo.svg" type="image/svg+xml"> Kein SVG</object>
+            <span class="header-logo-box">
+                        <object class="logo" width="75" data="<?php echo bloginfo( 'url' ) ?>/wp-content/uploads/2017/07/logo.svg" type="image/svg+xml">Kühle-Webdesign</object>
                 </span>
+            <span class="designloper">Webdesigner & Webentwickler</span>
             <span class="phone"><span class="icon-phone"></span><?php echo get_option( 'kwd_setting_phone' ) ?></span>
-            <span class="mail"><span class="icon-pencil"></span><?php echo get_option( 'kwd_setting_mail' ) ?></span>
+        </div>
+        <div class="mobileLogo">
+            <object class="logo" width="60" data="<?php echo get_template_directory_uri() . '/assets/images/whiteLogo.svg'?>" type="image/svg+xml">Kühle-Webdesign</object>
         </div>
 		<?php $args = array(
 			'theme_location'  => 'mainmenu',
