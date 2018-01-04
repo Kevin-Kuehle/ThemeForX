@@ -4,9 +4,32 @@
 */
 get_header(); ?>
     <div class="header-slider">
-        <div class="box box-2"></div>
-        <div class="box box-1"></div>
-        <div class="box box-3"></div>
+        <div class="box box-1">
+            <div class="row">
+                <div class="col md-6">
+                    <h2>Professionelle betreuung</h2>
+                    <p>Bei Kühle-Webdesign erhalten sie professionelle Betreuung und Beratung. Designer und Programmierer in einer Person um das best mögliche Ergebnis nach ihren Vorstellungen zu
+                        erhalten und das technisch auf den neusten stand. <br><br>
+                        Mein Motto: Profi statt Azubi.</p>
+                </div>
+                <div class="col img md-6">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/sliderWebsiteBuilding.svg' ?>" alt="Professionelle Betreuung bei Kühle-Webdesign">
+                </div>
+            </div>
+        </div>
+        <div class="box box-2">
+            <div class="row">
+                <div class="col md-6">
+                    <h2>Monatszahlung ohne Abo!</h2>
+                    <p>Bei Kühle-Webdesign gibt es keine versteckten Kosten oder eine automatische
+                        Vertragsverlängerung. Sie bezahlen nur die Leistung die sie auch erhalten haben! <br><br>
+                        Zahlen Sie den Gesamtwert Ihrer Webseite in 24 oder 36 Monatsraten bequem ab und Profitieren sie von einer kontinuierlichen Zusammenarbeit.</p>
+                </div>
+                <div class="col img md-6">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/MonatlicheZahlung.svg' ?>" alt="Ratenzahlung bei Kühle-Webdesign">
+                </div>
+            </div>
+        </div>
     </div>
     <main>
         <div class="row title">

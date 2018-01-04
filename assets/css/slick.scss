@@ -102,59 +102,54 @@
 /*=================================================================================================================================================================================================
                                                                                             Slider Header
 ================================================================================================= | =============================================================================================*/
-.header-slider, .slick-list {
+.header-slider {
   display : none;
+
+  .slick-list {
+
+    .slick-track {
+      display   : flex;
+      flex-flow : row;
+      .box {
+        display             : flex;
+        flex-flow           : row nowrap;
+        align-items         : center;
+        background-size     : cover;
+        background-position : 0 0;
+        @include removeGridMargins;
+
+        h2, p {
+          color : $light;
+          @include textOptimizer;
+          text-align: left;
+        }
+        h2 {
+          font-size : rem(28px);
+          padding   : 0;
+          margin-bottom: rem(18px);
+          line-height: 100%;
+        }
+        p {
+          font-size : rem(14px);
+        }
+        img {
+          height     : 100%;
+          width      : auto;
+          max-height : rem(138px) !important;
+        }
+
+        &.box-1 {
+        }
+      }
+    }
+  }
 
   @include breakpoint(lg) {
     display       : block;
     z-index       : 10;
     align-items   : center;
     margin-bottom : 3rem;
-
+    background    : linear-gradient(-90deg, rgba(30, 44, 67, 1) 0%, rgba(22, 32, 48, 1) 100%);
+    height        : 256px !important;
   }
-
-  .box {
-    display             : flex;
-    align-items         : center;
-    background-size     : cover;
-    background-position : 0 0;
-    height              : 320px;
-    padding             : $gap 0;
-
-    @include breakpoint(sm) {
-      height : 230px;
-    }
-
-    @include breakpoint(md) {
-      padding : $gap*2 0;
-    }
-
-    @include breakpoint(lg) {
-      padding : $gap*4 0;
-    }
-  }
-
-  .box-1 {
-    background-image : url("assets/images/slider-3.png");
-
-    .wordpress-logo {
-      display : none;
-
-      @include breakpoint(lg) {
-        display   : inherit;
-        font-size : rem(120px);
-        color     : $color-2;
-      }
-    }
-  }
-  .box-2 {
-    background-image : url("assets/images/slider-2.png");
-  }
-  .box-3 {
-    background-image : url("assets/images/slider-1.png");
-  }
-
-  //.slick-dots {
-  //
-  //}
 }

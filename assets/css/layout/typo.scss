@@ -24,15 +24,11 @@ p {
   color         : lighten($color-2, 10%);
   margin-bottom : $font-margin-bottom;
   position      : relative;
+  text-align    : center;
   @include textOptimizer;
 
   &:only-of-type, &:last-of-type, &:last-of-type > .row {
     margin-bottom : 0 !important;
-  }
-
-  @include breakpoint(sm) {
-    font-size   : $font-size;
-    line-height : $line-height;
   }
 
   strong {
@@ -51,6 +47,15 @@ p {
     }
 
   }
+
+  @include breakpoint(sm) {
+    font-size   : $font-size;
+    line-height : $line-height;
+  }
+
+  @include breakpoint(md) {
+    text-align : left;
+  }
 }
 /*=================================================================================================================================================================================================
                                                                                             Überschriften
@@ -66,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   td > & {
-    padding: 0;
+    padding : 0;
   }
   &.col {
     margin-bottom : 0;
@@ -74,14 +79,45 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h1-phone-size : rem(32px);
-$h1-tablet-size : rem(35px);
+// Phone Size
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h1-phone-size : rem(27px);
+$h2-phone-size : rem(24px);
+$h3-phone-size : rem(22px);
+$h4-phone-size : rem(20px);
+$h5-phone-size : rem(18px);
+$h6-phone-size : rem(16px);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Tablet Size
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$h1-tablet-size : rem(30px);
+$h2-tablet-size : rem(28px);
+$h3-tablet-size : rem(26px);
+$h4-tablet-size : rem(24px);
+$h5-tablet-size : rem(22px);
+$h6-tablet-size : rem(20px);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Desktop Size
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 $h1-desktop-size : rem(36px);
+$h2-desktop-size : rem(32px);
+$h3-desktop-size : rem(24px);
+$h4-desktop-size : rem(36px);
+$h5-desktop-size : rem(36px);
+$h6-desktop-size : rem(36px);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                                                               Margins
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// eventuell wird das erweitert wenn die darstellung weitere margins für breakpoints benötigt
 $h1-margin-bottom : rem(80px);
-
+$h2-margin-bottom : rem(40px);
+$h3-margin-bottom : rem(16px);
+$h5-margin-bottom : rem(90px);
+$h4-margin-bottom : rem(90px);
+$h6-margin-bottom : rem(90px);
 h1 {
   font-size     : $h1-phone-size;
-  margin-bottom : $h1-margin-bottom * $xs;
+  margin-bottom : $h1-margin-bottom;
   color         : $color-2;
   font-family   : $title-font;
   text-align    : center;
@@ -94,34 +130,29 @@ h1 {
 
   @include breakpoint(sm) {
     font-size     : $h1-phone-size;
-    margin-bottom : $h1-margin-bottom * $sm;
+    margin-bottom : $h1-margin-bottom;
   }
   @include breakpoint(md) {
     font-size     : $h1-tablet-size;
-    margin-bottom : $h1-margin-bottom * $md;
+    margin-bottom : $h1-margin-bottom;
   }
   @include breakpoint(lg) {
     font-size     : $h1-desktop-size;
-    margin-bottom : $h1-margin-bottom * $lg;
+    margin-bottom : $h1-margin-bottom;
   }
-
   @include breakpoint(xl) {
     font-size     : $h1-desktop-size;
-    margin-bottom : $h1-margin-bottom * $xl;
+    margin-bottom : $h1-margin-bottom;
   }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h2-phone-size : rem(28px);
-$h2-tablet-size : rem(30px);
-$h2-desktop-size : rem(32px);
-$h2-margin-bottom : rem(40px);
-
 h2 {
   font-size     : $h2-phone-size;
   margin-bottom : $h2-margin-bottom * $xs;
   color         : $color-2;
   font-weight   : 400;
   padding       : 0 $gap;
+  text-align    : center;
 
   @include breakpoint(sm) {
     font-size     : $h2-phone-size;
@@ -130,6 +161,7 @@ h2 {
   @include breakpoint(md) {
     font-size     : $h2-tablet-size;
     margin-bottom : $h2-margin-bottom * $md;
+    text-align    : left;
   }
   @include breakpoint(lg) {
     font-size     : $h2-desktop-size;
@@ -146,37 +178,62 @@ h2 {
   }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h3-base-size : rem(24px);
-$h3-margin-bottom : rem(16px);
-
 h3 {
-  font-size     : $h3-base-size;
+  font-size     : $h3-phone-size;
   margin-bottom : $h3-margin-bottom;
   color         : $color-2;
+
+  @include breakpoint(sm) {
+    font-size     : $h3-phone-size;
+    margin-bottom : $h3-margin-bottom;
+  }
+  @include breakpoint(md) {
+    font-size     : $h3-tablet-size;
+    margin-bottom : $h3-margin-bottom;
+  }
+  @include breakpoint(lg) {
+    font-size     : $h3-desktop-size;
+    margin-bottom : $h3-margin-bottom;
+  }
+  @include breakpoint(xl) {
+    font-size     : $h3-desktop-size;
+    margin-bottom : $h3-margin-bottom;
+  }
+
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h4-base-size : rem(36px);
-$h4-margin-bottom : rem(90px);
-
 h4 {
-  font-size     : $h4-base-size;
+  font-size     : $h4-desktop-size;
   margin-bottom : $h4-margin-bottom;
   color         : $color-2;
+
+  @include breakpoint(xs) {
+    font-size : $h3-desktop-size;
+  }
+
+  @include breakpoint(sm) {
+    font-size : $h3-desktop-size;
+  }
+
+  @include breakpoint(md) {
+    font-size : $h3-desktop-size;
+  }
+
+  @include breakpoint(lg) {
+    font-size : $h3-desktop-size;
+  }
+
+  @include breakpoint(xs) {
+  }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h5-base-size : rem(36px);
-$h5-margin-bottom : rem(90px);
-
-h5 { font-size  : $h5-base-size;
+h5 { font-size  : $h5-desktop-size;
   margin-bottom : $h5-margin-bottom;
   color         : $color-2;
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-$h6-base-size : rem(36px);
-$h6-margin-bottom : rem(90px);
-
 h6 {
-  font-size     : $h6-base-size;
+  font-size     : $h6-desktop-size;
   margin-bottom : $h6-margin-bottom;
   color         : $color-2;
 }
