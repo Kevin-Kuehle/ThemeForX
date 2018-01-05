@@ -647,40 +647,35 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Leistungen
 .pageTitle {
-  display          : flex;
-  background-color : #6cc2cd;
-  padding          : 2rem 0;
-  margin-bottom    : rem(120px)*0.6;
+  display       : flex;
+  background    : linear-gradient(-90deg, rgba(30, 44, 67, 1) 0%, rgba(22, 32, 48, 1) 100%);
+  padding       : 2rem 0;
+  margin-bottom : rem(120px)*0.6;
 
-  .wrap {
-    width     : 100%;
-    max-width : $template-width;
-    padding   : 0 $gap;
-    margin    : 0 auto;
-  }
-  .text {
-    font-family     : $title-font;
-    text-shadow     : rgba(0, 0, 0, 30%) 1px 1px 1px;
-    flex            : 1;
-    display         : flex;
-    align-content   : center;
-    align-items     : center;
-    justify-content : center;
-    justify-items   : center;
+  @include removeGridMargins;
 
-    h1 {
-      text-align  : center;
-      font-size   : rem(48px);
-      line-height : 100%;
-      color       : #162030;
-      margin      : 0;
+  .row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    .col {
 
-      span {
-        color     : $light;
-        font-size : rem(48px)*0.6;
-      }
     }
   }
+
+  h1 {
+    font-size   : rem(48px);
+    line-height : 100%;
+    color       : $light;
+    text-align: left;
+    margin: 0;
+
+    span {
+      color     : $light;
+      font-size : rem(48px)*0.6;
+    }
+  }
+
   .image {
     display : none;
   }
@@ -695,19 +690,13 @@
       display : flex;
     }
 
-    .text {
-      justify-content : flex-start;
-      justify-items   : flex-start;
-
-      h1 {
-        text-align  : left;
-        font-size   : rem(80px);
-        line-height : 80%;
-
-        span {
-          font-size : rem(80px)*0.5;
-        }
+    h1 {
+      font-size: rem(80px);
+      line-height: 70%;
+      span {
+        font-size: rem(32px);
       }
+
     }
     .image {
       display         : flex;
@@ -822,6 +811,9 @@ ul.leistungen {
   }
 }
 .projektAblauf {
+  p {
+    text-align : left;
+  }
   .infos {
     h4 {
       color       : $color-1;
@@ -833,6 +825,7 @@ ul.leistungen {
       font-weight : 400;
       font-style  : italic;
       color       : lighten($color-2, 20%);
+      text-align  : left;
     }
 
   }
@@ -841,7 +834,7 @@ ul.leistungen {
                                                                                             Global Classes
 ================================================================================================= | =============================================================================================*/
 .bold {
-  font-weight: bold;
+  font-weight : bold;
 }
 .greenBar {
   padding-left : rem($gap*1.5);

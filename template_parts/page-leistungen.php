@@ -5,9 +5,13 @@
 <?php get_header(); ?>
 <main>
     <div class="pageTitle">
-        <div class="wrap">
-            <div class="text"><h1>Leistungen <br> <span>von Kühle-Webdesign</span></h1></div>
-            <div class="image"><img src=" <?php echo get_template_directory_uri() . '/assets/images/webdevelopment.png' ?> " alt="Leistungen von Kuehle-Webdesign"></div>
+        <div class="row">
+            <div class="col md-4">
+                <h1>Leistungen <br> <span>von Kühle-Webdesign</span></h1>
+            </div>
+            <div class="col prefix-md-1 md-2"></div>
+            <div class="col md-2"></div>
+            <div class="col md-2"></div>
         </div>
     </div>
     <div class="row">

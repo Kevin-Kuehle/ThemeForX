@@ -47,7 +47,7 @@ get_header(); ?>
                             in eine internetbasierte Marketingstrategie, um Kunden besser erreichen zu können.</b></p>
                 </div>
                 <div class="col md-3 img lg-4 center">
-                    <img src="<?php echo get_template_directory_uri() ?> /assets/images/searchWebsite.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/searchWebsite.svg' ?>" alt="Kundenorientierte Webseite">
                 </div>
             </div>
             <div class="row">
@@ -57,7 +57,7 @@ get_header(); ?>
                         Design genau den Anforderungen einer Marketingstrategie entspricht.</p>
                 </div>
                 <div class="md-3 col img lg-4 center">
-                    <img src="<?php echo get_template_directory_uri() ?> /assets/images/Website_Erstellen.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Website_Erstellen.svg'?>" alt="Webmarketingstrategie erstellen lassen">
                 </div>
             </div>
         </div>

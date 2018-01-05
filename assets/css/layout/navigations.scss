@@ -161,7 +161,7 @@ nav.main-nav {
                                                                                              Mobile-Nav
 ================================================================================================= | =============================================================================================*/
 nav.mobile-nav {
-  background-color : $color-2;
+  @include gradiant-green;
   position         : fixed;
   top              : 0;
   left             : 0;
@@ -185,11 +185,12 @@ nav.mobile-nav {
 
     li {
       display       : block;
-      margin-bottom : $gap;
-      border-left   : 2px $color-1 solid;
+      margin-bottom : $gap*2;
+      border-left   : 2px $color-4 solid;
 
       a {
-        color       : $color-1;
+        color       : $color-2;
+        font-size: rem(24px);
         padding     : rem(18px);
         font-weight : 400;
 
