@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="de">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112026636-1"></script>
+    <script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+
+		gtag('js', new Date());
+
+		gtag('config', 'UA-112026636-1');
+    </script>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
     <meta name="description" content="Kühle-Webdesign in Berlin erstellt füt Ihr Unternehmen eine Professionelle Webseite!" >

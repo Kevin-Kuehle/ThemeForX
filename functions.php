@@ -11,7 +11,6 @@ function my_theme_scrips() {
 	//                                             Style Scrips
 	//__________________________________________________|_______________________________________________________________
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/assets/css/lightbox.css' );
 
 	//                                            Register Fonts
 	//__________________________________________________|_______________________________________________________________
@@ -95,9 +94,7 @@ add_action( 'widgets_init', 'bt_widget_setup' );
 //============================================================================================== | ================================================================================================
 
 function kw_svg( $svg_mime ) {
-
 	$svg_mime['svg'] = 'image/svg+xml';
-
 	return $svg_mime;
 }
 

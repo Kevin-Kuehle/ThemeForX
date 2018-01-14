@@ -5,6 +5,10 @@
   box-sizing : border-box;
   margin     : 0;
   padding    : 0;
+
+  &:focus {
+    outline : 0 !important;
+  }
 }
 html {
   background-color : $light;
@@ -25,7 +29,9 @@ body {
 }
 //----------------------------------------------------------------------------------------------------------------------
 header {
-  & > * { z-index : 100; }
+  & > * {
+    z-index : 100;
+  }
 }
 main {
   flex : 5 0 auto;
@@ -38,39 +44,47 @@ footer {
   margin-top       : rem($gap * 2);
   background-color : $color-5;
 
+  img {
+    display       : block;
+    margin        : 0 auto;
+    margin-bottom : rem(8px);
+  }
+
   body.home & {
     margin-top : 0;
   }
-
   &.footer {
-    padding: rem(36px) 0;
-    align-items: center;
+    padding     : rem(36px) 0;
+    align-items : center;
 
     img {
       max-height : rem(90px);
       width      : auto;
     }
     .row {
-      margin-bottom: 0;
+      margin-bottom : 0;
     }
   }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-a { color : $siteLink-color; text-decoration : none;
+a {
+  color           : $siteLink-color;
+  text-decoration : none;
   &:hover {
     color : $siteLinkHover-color;
   }
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+address {
+  font-style : normal;
+}
 /*=================================================================================================================================================================================================
                                                                                         Global Content Elements
 ================================================================================================= | =============================================================================================*/
 
 img {
-  height     : 100%;
-  max-height : rem(150px);
-  width      : auto;
+  height : 100%;
+  width  : auto;
 
   @include breakpoint(md) {
     max-width : 100%;
